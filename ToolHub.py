@@ -23,10 +23,15 @@ options = """
 \033[33m[2] IP Flooder
 \033[33m[3] E-Mail Spammer
 \033[33m[4] Simple port scanner
+\033[33m[5] Exit
 """
 
 loop = True
 while loop:
+    if platform == "linux" or platform == "linux2":
+        os.system('clear')
+    elif platform == "win32":
+        os.system('cls')
     os.system('cls')
     print(toolhub)
     print(options)
@@ -113,6 +118,10 @@ while loop:
         sleep(2)
         loop = True
     elif choice == "4":
+        if platform == "linux" or platform == "linux2":
+            os.system('clear')
+        elif platform == "win32":
+            os.system('cls')
         print("Target address: ")
         target = input("")
 
@@ -139,6 +148,5 @@ while loop:
         except:
             sleep(2)
             os.system('cls')
-        
-        
-
+    elif choice == "5":
+        exit()
