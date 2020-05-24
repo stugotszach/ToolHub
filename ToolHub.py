@@ -122,6 +122,7 @@ while loop:
             os.system('clear')
         elif platform == "win32":
             os.system('cls')
+        print(toolhub)
         print("Target address: ")
         target = input("")
 
